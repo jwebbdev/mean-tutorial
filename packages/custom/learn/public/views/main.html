@@ -1,0 +1,7 @@
+<div ng-init="learnCtrl.loadResources()">
+  <h1>{{learnCtrl.title}}</h1>
+  <div ng-repeat="resource in learnCtrl.resources">
+    <a ng-if="resource.internal" ui-sref="{{resource.link}}">{{resource.title}}</a>
+    <a ng-if="!resource.internal" href="{{resource.link}}" target="_blank">{{resource.title}}</a>
+  </div>
+</div>
